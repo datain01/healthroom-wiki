@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>타키카와 시즈네 - 보건위키</title>
+<meta name="description" content="MZN 드림 OC 타키카와 시즈네의 팬메이드 위키 문서">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%236b4a7a%27/%3E%3Cpath d=%27M13 7h6v6h6v6h-6v6h-6v-6H7v-6h6z%27 fill=%27%23fff%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#6b4a7a; --brand-dark:#553a61;
+  --bg:#f5f5f5; --paper:#ffffff; --text:#373a3c; --muted:#888; --line:#ccc; --line-soft:#e5e5e5;
+  --link:#0275d8; --link-red:#ff0000; --link-ext:#008000;
+  --box:#f9f9f9; --quote:#eeeeee;
+  --sz1:#302c2f; --sz2:#61170d; --sz3:#2b182c; --szlight:#8a6d8f; --tk:#bedae5;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1c1d1f; --paper:#27292d; --text:#dddddd; --muted:#9a9a9a; --line:#44464b; --line-soft:#383a3e;
+    --link:#5ab0ff; --link-red:#ff6b6b; --link-ext:#5ccf5c; --box:#2f3135; --quote:#33363a;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1c1d1f; --paper:#27292d; --text:#dddddd; --muted:#9a9a9a; --line:#44464b; --line-soft:#383a3e;
+  --link:#5ab0ff; --link-red:#ff6b6b; --link-ext:#5ccf5c; --box:#2f3135; --quote:#33363a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.65 "Noto Sans KR","Malgun Gothic",sans-serif;word-break:keep-all;overflow-wrap:anywhere}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+a.red{color:var(--link-red)}
+a.ext{color:var(--link-ext)}
+a.ext::before{content:"🔗";font-size:.8em;margin-right:2px}
+
+/* 상단 바 */
+.topbar{background:var(--brand);color:#fff;position:sticky;top:0;z-index:20;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.topbar .in{max-width:1300px;margin:0 auto;height:56px;display:flex;align-items:center;gap:18px;padding:0 16px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:20px;color:#fff;letter-spacing:-.5px;white-space:nowrap}
+.logo svg{width:28px;height:28px}
+.nav{display:flex;gap:4px;font-size:14px}
+.nav a{color:#fff;padding:6px 10px;border-radius:4px;opacity:.95;white-space:nowrap}
+.nav a:hover{background:rgba(255,255,255,.15);text-decoration:none}
+.search{margin-left:auto;display:flex;flex:0 1 280px;min-width:0}
+.search input{flex:1;min-width:0;border:0;border-radius:4px 0 0 4px;padding:7px 10px;font:inherit;font-size:14px;outline:none}
+.search button{border:0;background:#fff;color:var(--brand);padding:0 10px;border-radius:0 4px 4px 0;cursor:pointer;font-size:15px}
+.theme{background:transparent;border:1px solid rgba(255,255,255,.6);color:#fff;border-radius:4px;padding:4px 8px;cursor:pointer;font-size:13px;white-space:nowrap}
+
+.wrap{max-width:1300px;margin:0 auto;padding:20px 16px 40px;display:flex;gap:20px;align-items:flex-start}
+article{flex:1;min-width:0;background:var(--paper);border:1px solid var(--line-soft);border-radius:6px;padding:26px 30px 36px}
+aside{width:260px;flex-shrink:0;position:sticky;top:76px}
+aside .card{background:var(--paper);border:1px solid var(--line-soft);border-radius:6px;padding:12px 14px;margin-bottom:14px;font-size:13px}
+aside h4{margin:0 0 8px;font-size:14px;border-bottom:2px solid var(--brand);padding-bottom:6px}
+aside ol{margin:0;padding-left:20px}
+aside li{margin:3px 0}
+aside .rank span{color:var(--muted);margin-right:6px}
+
+/* 문서 머리 */
+.doc-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line-soft);padding-bottom:12px;margin-bottom:6px}
+h1.title{margin:0;font-size:32px;font-weight:700;letter-spacing:-1px;line-height:1.3}
+h1.title small{font-size:15px;font-weight:400;color:var(--muted);margin-left:6px;letter-spacing:0}
+.tools{display:flex;border:1px solid var(--line);border-radius:4px;overflow:hidden;font-size:13px}
+.tools a{padding:5px 11px;color:var(--text);border-right:1px solid var(--line);background:var(--paper)}
+.tools a:last-child{border-right:0}
+.tools a:hover{background:var(--box);text-decoration:none}
+.meta{text-align:right;font-size:12.5px;color:var(--muted);margin:4px 0 12px}
+.cat{border:1px solid var(--line);border-radius:4px;padding:6px 10px;font-size:13px;margin-bottom:14px}
+.cat b{margin-right:4px}
+.cat a{margin:0 3px}
+.cat a+a::before{content:"|";color:var(--muted);margin-right:6px}
+
+/* 틀 박스 */
+.notice{border:2px solid var(--line);border-radius:4px;padding:10px 14px;margin:10px 0;background:var(--box);font-size:14px;display:flex;gap:12px;align-items:center}
+.notice .ic{font-size:26px;line-height:1}
+.notice.spoiler{border-color:#e05050}
+.notice.spoiler b{color:#e05050}
+.notice.oc{border-color:var(--szlight)}
+.navbox{border:2px solid var(--sz3);border-radius:4px;margin:10px 0;overflow:hidden;font-size:13.5px}
+.navbox .h{background:linear-gradient(90deg,var(--sz1),var(--sz3));color:#fff;text-align:center;padding:6px;font-weight:700}
+.navbox .b{padding:8px 12px;text-align:center;background:var(--paper)}
+.navbox .b a{margin:0 4px}
+.navbox .row{display:flex;border-top:1px solid var(--line-soft)}
+.navbox .row .k{background:var(--box);width:90px;flex-shrink:0;padding:6px;text-align:center;font-weight:700;border-right:1px solid var(--line-soft)}
+.navbox .row .v{padding:6px 10px}
+
+/* 인포박스 */
+.infobox{float:right;width:340px;margin:4px 0 16px 22px;border:2px solid var(--sz3);border-collapse:collapse;font-size:13.5px;background:var(--paper)}
+.infobox td,.infobox th{border:1px solid var(--line-soft);padding:6px 8px;vertical-align:middle}
+.infobox .ttl{background:linear-gradient(135deg,var(--sz1),var(--sz3) 60%,var(--sz2));color:#fff;text-align:center;padding:10px 6px}
+.infobox .ttl .n{font-size:20px;font-weight:700;letter-spacing:-.5px}
+.infobox .ttl .s{font-size:12px;opacity:.85}
+.infobox th{background:var(--sz3);color:#fff;width:96px;font-weight:500;text-align:center}
+.infobox .imgcell{padding:0;text-align:center;background:var(--box)}
+.itabs{display:flex}
+.itabs button{flex:1;border:0;border-bottom:2px solid transparent;background:var(--box);padding:6px;font:inherit;font-size:13px;color:var(--text);cursor:pointer}
+.itabs button.on{border-bottom-color:var(--sz2);font-weight:700;background:var(--paper)}
+.ipanel{display:none;padding:8px}
+.ipanel.on{display:block}
+.ipanel img{max-width:100%;max-height:420px;display:block;margin:0 auto}
+.ipanel .cap{font-size:12px;color:var(--muted);margin-top:4px}
+.sw{display:inline-block;width:14px;height:14px;border:1px solid var(--line);border-radius:2px;vertical-align:-2px;margin-right:3px}
+.infobox .sec{background:var(--box);text-align:center;font-weight:700;color:var(--text)}
+
+/* 목차 */
+.toc{display:inline-block;border:1px solid var(--line);border-radius:4px;padding:10px 18px 12px;margin:6px 0 18px;background:var(--box);min-width:220px}
+.toc .h{font-weight:700;font-size:16px;margin-bottom:4px}
+.toc ol{margin:0;padding-left:0;list-style:none}
+.toc ol ol{padding-left:18px}
+.toc li{margin:2px 0;font-size:14px}
+.toc .num{color:var(--link);margin-right:4px}
+
+/* 본문 */
+h2,h3,h4{clear:none;position:relative}
+h2{font-size:24px;margin:32px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line);cursor:pointer;user-select:none;display:flex;align-items:baseline;gap:6px}
+h3{font-size:20px;margin:24px 0 8px;padding-bottom:4px;border-bottom:1px solid var(--line-soft);cursor:pointer;user-select:none;display:flex;align-items:baseline;gap:6px}
+h4{font-size:17px;margin:18px 0 6px;display:flex;align-items:baseline;gap:6px}
+.hn{color:var(--link)}
+.edit{margin-left:auto;font-size:12.5px;font-weight:400}
+.sec-body.closed{display:none}
+h2.closed,h3.closed{opacity:.6}
+p{margin:6px 0 10px}
+ul.w{margin:4px 0 10px;padding-left:22px}
+ul.w li{margin:3px 0}
+del{color:var(--muted)}
+.hl{background:linear-gradient(transparent 60%,rgba(138,109,143,.35) 0)}
+blockquote{margin:10px 0;padding:10px 16px;border-left:5px solid var(--brand);background:var(--quote);border-radius:0 4px 4px 0}
+blockquote .who{display:block;text-align:right;font-size:13px;color:var(--muted);margin-top:4px}
+.chat{display:flex;flex-direction:column;gap:6px;margin:10px 0 14px;max-width:560px}
+.bubble{padding:7px 14px;border-radius:16px;font-size:14px;max-width:85%;color:#fff}
+.bubble.s{background:#b07ae0;align-self:flex-start;border-bottom-left-radius:4px}
+.bubble.m{background:#6fb7dd;align-self:flex-end;border-bottom-right-radius:4px}
+.bubble i{font-style:normal;font-size:11px;opacity:.85;display:block}
+table.w{border-collapse:collapse;margin:10px 0 14px;font-size:14px;max-width:100%}
+table.w td,table.w th{border:1px solid var(--line);padding:6px 10px;vertical-align:top}
+table.w th{background:var(--sz3);color:#fff;font-weight:500}
+table.w td.k{background:var(--box);font-weight:700;white-space:nowrap;text-align:center}
+.scroll{overflow-x:auto}
+details.fold{border:1px solid var(--line);border-radius:4px;margin:10px 0}
+details.fold summary{cursor:pointer;padding:6px 12px;background:var(--box);font-weight:700;list-style:none;text-align:center}
+details.fold summary::-webkit-details-marker{display:none}
+details.fold summary::after{content:" [ 펼치기 · 접기 ]";font-weight:400;font-size:13px;color:var(--link)}
+details.fold .in{padding:8px 14px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin:10px 0}
+.gallery figure{margin:0;border:1px solid var(--line-soft);border-radius:4px;overflow:hidden;background:var(--box)}
+.gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;cursor:zoom-in}
+.gallery figcaption{font-size:12px;padding:4px 6px;text-align:center;color:var(--muted)}
+.fig{float:right;clear:right;margin:6px 0 12px 18px;width:240px;border:1px solid var(--line-soft);border-radius:4px;background:var(--box);padding:6px;text-align:center;font-size:12px;color:var(--muted)}
+.fig img{width:100%;display:block;border-radius:2px;cursor:zoom-in}
+.clear{clear:both}
+
+/* 각주 */
+sup.fn a{font-size:11px;padding:0 1px}
+.fn-wrap{position:relative}
+.fn-pop{position:absolute;z-index:30;max-width:320px;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:8px 10px;font-size:13px;box-shadow:0 3px 10px rgba(0,0,0,.2);display:none}
+.footnotes{border-top:1px solid var(--line);margin-top:30px;padding-top:10px;font-size:13px}
+.footnotes ol{padding-left:0;list-style:none;margin:0}
+.footnotes li{margin:3px 0}
+.footnotes li:target{background:rgba(255,230,0,.25)}
+.footnotes a.back{margin-right:4px}
+
+.doc-foot{margin-top:24px;font-size:12px;color:var(--muted);border-top:1px solid var(--line-soft);padding-top:10px}
+footer{text-align:center;font-size:12px;color:var(--muted);padding:10px 16px 30px}
+
+/* 라이트박스 */
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:100;cursor:zoom-out;padding:16px}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:100%}
+
+@media (max-width:1000px){ aside{display:none} }
+@media (max-width:720px){
+  .nav{display:none}
+  .topbar .in{gap:10px}
+  .logo span{display:none}
+  article{padding:16px 16px 26px;border-radius:0;border-left:0;border-right:0}
+  .wrap{padding:0}
+  .infobox{float:none;width:100%;margin:6px 0 14px}
+  .fig{float:none;width:100%;margin:8px 0}
+  h1.title{font-size:26px}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar"><div class="in">
+  <a class="logo" href="#">
+    <svg viewBox="0 0 32 32" fill="none"><rect x="1" y="1" width="30" height="30" rx="7" fill="#fff"/><path d="M13 7h6v6h6v6h-6v6h-6v-6H7v-6h6z" fill="#6b4a7a"/></svg>
+    <span>보건위키</span>
+  </a>
+  <nav class="nav"><a href="#">최근 변경</a><a href="#">최근 토론</a><a href="#">특수 기능</a></nav>
+  <form class="search" onsubmit="return false"><input placeholder="여기에서 검색" aria-label="검색"><button aria-label="검색">🔍</button></form>
+  <button class="theme" id="themeBtn" type="button">🌓 테마</button>
+</div></header>
+
+<div class="wrap">
+<article>
+
+  <div class="doc-head">
+    <h1 class="title">타키카와 시즈네</h1>
+    <div class="tools"><a href="#">☆ 1,203</a><a href="#">편집</a><a href="#">토론</a><a href="#">역사</a><a href="#">ACL</a></div>
+  </div>
+  <div class="meta">최근 수정 시각: 2026-11-16 21:47:03</div>
+
+  <div class="cat"><b>분류:</b>
+    <a href="#">페르소나 5 더 로열/등장인물</a><a href="#">드림 OC</a><a href="#">사립 슈진 학원</a><a href="#">MZN</a><a href="#">1월 3일 생</a>
+  </div>
+
+  <div class="notice spoiler"><span class="ic">⚠️</span><div><b>이 문서에 스포일러가 포함되어 있습니다.</b><br>이 문서가 설명하는 작품이나 인물 등에 대한 줄거리, 결말, 반전 요소 등을 직·간접적으로 포함하고 있습니다. 특히 <a href="#">페르소나 5 더 로열</a>의 <a href="#">3학기</a> 관련 내용이 다수 언급됩니다.</div></div>
+  <div class="notice oc"><span class="ic">💜</span><div>이 문서는 2차 창작 <b>드림 OC</b>에 대해 다룹니다. 원작 공식 설정이 아닌 오너 설정이 포함되어 있으니 혼동하지 않도록 주의하시기 바랍니다.</div></div>
+
+  <div class="navbox">
+    <div class="h">MZN · 타쿠토 × 시즈네</div>
+    <div class="row"><div class="k">인물</div><div class="v"><a href="#">마루키 타쿠토</a> · <strong>타키카와 시즈네</strong></div></div>
+    <div class="row"><div class="k">장소</div><div class="v"><a href="#">사립 슈진 학원</a> · <a href="#">보건실</a> · <a class="red" href="#">오다이바 연구소 터</a></div></div>
+    <div class="row"><div class="k">관련</div><div class="v"><a href="#">인지가학</a> · <a class="red" href="#">So Happy World(팬사이트)</a> · <a href="#s7">갤러리</a></div></div>
+  </div>
+
+  <!-- 인포박스 -->
+  <table class="infobox">
+    <tr><td colspan="2" class="ttl"><div class="n">타키카와 시즈네</div><div class="s">滝河 静音 | Takikawa Shizune</div></td></tr>
+    <tr><td colspan="2" class="imgcell">
+      <div class="itabs"><button class="on" data-p="p1" type="button">교복</button><button data-p="p2" type="button">두상</button><button data-p="p3" type="button">사복</button></div>
+      <div class="ipanel on" id="p1"><img src="img/full.webp" alt="시즈네 교복 전신"><div class="cap">교복 차림 (© DAPHILL)</div></div>
+      <div class="ipanel" id="p2"><img src="img/head.webp" alt="시즈네 두상"><div class="cap">두상 일러스트</div></div>
+      <div class="ipanel" id="p3"><img src="img/g-0024.webp" alt="시즈네 사복 모음"><div class="cap">사복 모음</div></div>
+    </td></tr>
+    <tr><th>이름</th><td>타키카와 시즈네<br><small>滝河 静音</small></td></tr>
+    <tr><th>애칭</th><td>즈네, 쨔무<sup class="fn"><a href="#fn1" id="r1">[1]</a></sup></td></tr>
+    <tr><th>소속</th><td><a href="#">사립 슈진 학원</a> 3학년<br>보건위원장</td></tr>
+    <tr><th>나이</th><td>18세 (2016년 기준)</td></tr>
+    <tr><th>생일</th><td>1월 3일</td></tr>
+    <tr><th>신체</th><td>167cm</td></tr>
+    <tr><th>아르카나</th><td>우물 (The Well)<sup class="fn"><a href="#fn2" id="r2">[2]</a></sup></td></tr>
+    <tr><th>이미지 컬러</th><td><span class="sw" style="background:#302c2f"></span><span class="sw" style="background:#61170d"></span><span class="sw" style="background:#2b182c"></span><br>검보라색 / 보라색</td></tr>
+    <tr><th>아르바이트</th><td>방과 후 병원 근무</td></tr>
+    <tr><td colspan="2" class="sec">관계</td></tr>
+    <tr><th>짝사랑</th><td><a href="#">마루키 타쿠토</a> <small>(키 차이 15cm)</small></td></tr>
+    <tr><th>관계명</th><td>보건실의 잡담 메이트</td></tr>
+    <tr><td colspan="2" class="sec">기타</td></tr>
+    <tr><th>원작</th><td><a href="#">페르소나 5 더 로열</a> (2차 창작)</td></tr>
+    <tr><th>디자인</th><td>오너 OC</td></tr>
+  </table>
+
+  <div class="toc">
+    <div class="h">목차</div>
+    <ol>
+      <li><a href="#s1"><span class="num">1.</span>개요</a></li>
+      <li><a href="#s2"><span class="num">2.</span>특징</a>
+        <ol><li><a href="#s2-1"><span class="num">2.1.</span>외모</a></li><li><a href="#s2-2"><span class="num">2.2.</span>성격</a></li><li><a href="#s2-3"><span class="num">2.3.</span>가정환경</a></li></ol></li>
+      <li><a href="#s3"><span class="num">3.</span>작중 행적</a>
+        <ol><li><a href="#s3-1"><span class="num">3.1.</span>카운슬러, 부임하다</a></li><li><a href="#s3-2"><span class="num">3.2.</span>방관의 고백</a></li><li><a href="#s3-3"><span class="num">3.3.</span>행복을 위한 연구</a></li><li><a href="#s3-4"><span class="num">3.4.</span>각자의 사정</a></li><li><a href="#s3-5"><span class="num">3.5.</span>신뢰와 이별</a></li><li><a href="#s3-6"><span class="num">3.6.</span>3학기, 그 후</a></li></ol></li>
+      <li><a href="#s4"><span class="num">4.</span>인간관계</a>
+        <ol><li><a href="#s4-1"><span class="num">4.1.</span>마루키 타쿠토</a></li><li><a href="#s4-2"><span class="num">4.2.</span>아마미야</a></li><li><a href="#s4-3"><span class="num">4.3.</span>부모</a></li></ol></li>
+      <li><a href="#s5"><span class="num">5.</span>호칭</a></li>
+      <li><a href="#s6"><span class="num">6.</span>명대사</a></li>
+      <li><a href="#s7"><span class="num">7.</span>갤러리</a></li>
+      <li><a href="#s8"><span class="num">8.</span>여담</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <h2 id="s1"><span class="hn">1.</span> 개요<a class="edit" href="#">[편집]</a></h2>
+  <div class="sec-body">
+  <blockquote>이렇게 다가가도 괜찮을까. 그래도, 조금 더 용기 내고 싶어.<span class="who">— 타키카와 시즈네</span></blockquote>
+  <p><a href="#">페르소나 5 더 로열</a>을 배경으로 한 2차 창작 드림 OC. <a href="#">사립 슈진 학원</a> 3학년이자 <b>보건위원장</b>으로, 다친 학생들을 치료해주고 방과 후에는 병원에서 일하는, 남을 돕는 일이 몸에 밴 학생이다.</p>
+  <p>4월의 투신 사건 이후 임시로 부임한 스쿨 카운슬러 <a href="#">마루키 타쿠토</a>가 보건실을 상담 장소로 쓰게 되면서 매일같이 얼굴을 마주하게 되고, "모두를 행복하게 하기 위한 연구"를 하는 그에게 반해 <span class="hl">폐가 되지 않도록 마음을 억누른 채 짝사랑 중</span>이다. <del>그리고 마루키는 이미 눈치챘다</del><sup class="fn"><a href="#fn3" id="r3">[3]</a></sup></p>
+  <p>마루키와의 커플링은 흔히 <b>MZN</b>(마즈네) 또는 <b>T×S</b>로 표기된다.</p>
+  </div>
+
+  <!-- 2 -->
+  <h2 id="s2"><span class="hn">2.</span> 특징<a class="edit" href="#">[편집]</a></h2>
+  <div class="sec-body">
+  <h3 id="s2-1"><span class="hn">2.1.</span> 외모<a class="edit" href="#">[편집]</a></h3>
+  <div class="sec-body">
+  <div class="fig"><img src="img/g-0029.webp" alt="시즈네 전신" loading="lazy">시즈네 전신</div>
+  <ul class="w">
+    <li><b>검보라색 반곱슬</b> 머리. 왼쪽 위로 삐죽 솟은 머리카락 두 가닥이 포인트.<sup class="fn"><a href="#fn4" id="r4">[4]</a></sup></li>
+    <li>허리까지 내려오는 <b>로우테일</b>.</li>
+    <li>끝이 살짝 올라간 <b>검붉은 눈</b>과 속눈썹. 성숙하면서도 나름 귀여운 인상.</li>
+    <li>슬렌더 체형에 거유.</li>
+    <li>교복 재킷 카라에는 3학년을 뜻하는 <b>"3" 뱃지</b>를 달고 있다.</li>
+    <li>평소에는 <b>무표정</b>에 가깝지만, 마루키 앞에서만은 표정이 풀린다. 이른바 <del>드림캐 한정 데레데레</del>.</li>
+  </ul>
+  <details class="fold"><summary>오너 지정 NG 해석</summary><div class="in">
+    <ul class="w"><li>일자 눈</li><li>처진 인상</li><li>츤데레 성격</li></ul>
+    <p>시즈네는 츤데레가 아니다. 무뚝뚝해 보일 뿐 말은 늘 다정하게 한다.</p>
+  </div></details>
+  </div>
+
+  <h3 id="s2-2"><span class="hn">2.2.</span> 성격<a class="edit" href="#">[편집]</a></h3>
+  <div class="sec-body">
+  <p>키워드는 <b>차분함 · 세심함 · 헌신적</b>.</p>
+  <p>조용한 일상을 바라면서도 보건위원장으로서 다친 학생들을 정성껏 치료해 주는 온화한 학생. 존재감은 옅은 편이라 학생들 사이에서는 "보건실에 늘 있는 그 선배" 정도로 인식된다. 특별한 존재를 동경하면서도 정작 자신은 앞으로 나아가지 못하는, 이른바 <b>나데나데 여고생 망</b>.<sup class="fn"><a href="#fn5" id="r5">[5]</a></sup></p>
+  <p>남을 돕는 데는 익숙하지만 자기 이야기는 좀처럼 꺼내지 않는다. 아픈 걸 참고 괜찮은 척 견디는 습관이 있는데, 팬사이트 인트로의 예고장 문구 "괜찮은 척 견뎌온 당신은 아픔을 참는 대죄를 저질렀다"가 바로 이 부분을 겨냥한 것이다.</p>
+  </div>
+
+  <h3 id="s2-3"><span class="hn">2.3.</span> 가정환경<a class="edit" href="#">[편집]</a></h3>
+  <div class="sec-body">
+  <p>부모의 무관심 속에서 사실상 <b>방치된 채</b> 자랐다. 집안에서 자신을 이름으로 불러주는 사람조차 없었으며, 이 때문에 훗날 마루키가 처음으로 "시즈네"라고 불러주었을 때 크게 기뻐한다. 본인은 이를 수치스럽게 여겨 숨기고 있었으나 <a href="#s3-4">각자의 사정</a> 사건 때 마루키에게 들키게 된다.</p>
+  </div>
+  </div>
+
+  <!-- 3 -->
+  <h2 id="s3"><span class="hn">3.</span> 작중 행적<a class="edit" href="#">[편집]</a></h2>
+  <div class="sec-body">
+  <p>원작의 2016년 4월부터 이듬해까지를 6단계로 나눈다. 단계 이름은 공식 타임라인을 따랐다.</p>
+
+  <h3 id="s3-1"><span class="hn">3.1.</span> 카운슬러, 부임하다<a class="edit" href="#">[편집]</a></h3>
+  <div class="sec-body">
+  <p><b>2016년 4월 15일 (금).</b> 스쿨 카운슬러 정식 부임 전, 상담 장소로 쓸 보건실을 소개받은 마루키가 방과 후 보건실에 남아 있던 시즈네를 만난다. 가볍게 통성명을 하며, 앞으로 보건실에서 볼 일이 잦을 테니 잘 부탁한다는 인사를 나눈다. 시즈네는 속으로 <del>인기 많아 보이는 선생님이 오셨으니 조용한 보건실은 이제 끝이구나</del> 하고 생각했다고.</p>
+  <p>5월 17일, 마루키가 정식으로 부임하며 두 사람은 연락처를 주고받는다.</p>
+  <div class="chat"><div class="bubble m"><i>마루키</i>보건실을 상담실로 쓰게 돼서 조금 미안했지…</div><div class="bubble s"><i>시즈네</i>선생님이 정한 것도 아닌 걸요, 어쩔 수 없죠.</div></div>
+  </div>
+
+  <h3 id="s3-2"><span class="hn">3.2.</span> 방관의 고백<a class="edit" href="#">[편집]</a></h3>
+  <div class="sec-body">
+  <p><b>5월 21일 (토).</b> 학생들에게 피해를 입히고 떠난 <a href="#">체육교사</a> 사건의 뒷수습으로 학생들을 상담하던 마루키는, 간접 피해자인 시즈네에게도 카운슬링을 권한다. 상담을 꺼리던 시즈네는 결국 <b>배구부 학생들이 폭행당하는 걸 알면서도 외면한 자신은 방관자였다</b>고 털어놓는다. 마루키는 그건 "그럴 수밖에 없던 현실"이었다며 위로하고, 이 배려를 계기로 시즈네는 마음을 열기 시작한다.</p>
+  <div class="chat"><div class="bubble s"><i>시즈네</i>제가 용기를 냈다면, 달라졌을까요?</div><div class="bubble m"><i>마루키</i>시즈네가 책임을 느낄 필요는 없어.</div></div>
+  </div>
+
+  <h3 id="s3-3"><span class="hn">3.3.</span> 행복을 위한 연구<a class="edit" href="#">[편집]</a></h3>
+  <div class="sec-body">
+  <p><b>5월 23일 (월).</b> 여느 때처럼 점심시간에 보건실에 간 시즈네는 켜져 있던 마루키의 노트북에서 작성 중이던 논문을 읽게 된다. 자리를 비웠던 마루키가 돌아오자 몰래 읽은 것을 사과하지만, 마루키는 오히려 의견을 물어 온다. 흥미가 생겨 연구에 대해 묻는 시즈네에게 마루키는 <b>"모두를 행복하게 하기 위한 연구"</b>라고 답한다. 소소한 일상만 바라던 시즈네는 큰 뜻을 향한 그의 야망에 반하고 만다.</p>
+  <div class="chat"><div class="bubble s"><i>시즈네</i>엄청 다정하고, 멋진 목표예요.</div><div class="bubble m"><i>마루키</i>좋게 봐줘서 고마워, 진심으로.</div></div>
+  <details class="fold"><summary>이 시기의 주요 일지</summary><div class="in">
+    <table class="w">
+      <tr><td class="k">5/30</td><td>미화 활동 날, 돈지루를 함께 먹었다</td></tr>
+      <tr><td class="k">6/3</td><td>마음을 자각한 밤, 검문을 당했다 <del>왜?</del></td></tr>
+      <tr><td class="k">6/5</td><td>백화점에서 우연히 만나 쿠키를 받았다</td></tr>
+      <tr><td class="k">6/14</td><td>아마미야에게 이상형을 들켜버렸다</td></tr>
+    </table>
+  </div></details>
+  </div>
+
+  <h3 id="s3-4"><span class="hn">3.4.</span> 각자의 사정<a class="edit" href="#">[편집]</a></h3>
+  <div class="sec-body">
+  <p><b>6월 25일 (토).</b> 심한 감기로 보건실에서 쉬던 시즈네는 하교 시간이 지나도 몸이 나아지지 않았고, 폭우 탓에 차를 가져온 마루키가 집까지 데려다준다. 이 과정에서 <b>방치된 가정환경을 들키게 된다.</b></p>
+  <p>마루키는 수치심을 느낄 시즈네를 배려해, 자신도 강도 사건으로 약혼자와 파혼하고 인지가학 연구에 몰두하게 된 과거를 털어놓는다. 그의 아픔을 알게 된 시즈네는 연구가 완성되어 그가 구원받기를 진심으로 바라며 <b>연구를 돕기로 결심</b>한다.</p>
+  <p>6월 27일, 시즈네가 집안 사정을 직접 이야기하면서 처음으로 이름으로 불리게 된다.</p>
+  <div class="chat"><div class="bubble m"><i>마루키</i>이때 마음을 열고 이름으로 불러달라 했었지.</div><div class="bubble s"><i>시즈네</i>저를 이름으로 불러준 사람이 없었어서, 기뻤어요.</div></div>
+  <details class="fold"><summary>여름방학 일지</summary><div class="in">
+    <table class="w">
+      <tr><td class="k">7/5</td><td>보건실 괴롭힘의 범인을 알게 됐다</td></tr>
+      <tr><td class="k">7/19</td><td>진로 이야기를 하고 과자를 잔뜩 받았다</td></tr>
+      <tr><td class="k">8/6</td><td>오다이바에서 사라진 연구소 터를 보았다</td></tr>
+      <tr><td class="k">8/23</td><td>카페에서 함께 연구하며 디저트를 나눠 먹었다</td></tr>
+    </table>
+  </div></details>
+  </div>
+
+  <h3 id="s3-5"><span class="hn">3.5.</span> 신뢰와 이별<a class="edit" href="#">[편집]</a></h3>
+  <div class="sec-body">
+  <div class="fig"><img src="img/g-0059.webp" alt="임기 종료 전날" loading="lazy">임기 종료 전날 (© 쿠지)</div>
+  <p><b>11월 18일 (금).</b> 보건실에서 잡담부터 연구까지 신뢰를 쌓아 온 나날이 지나고, 마루키의 상담교사 임기가 끝난다. <a href="#s4-2">주인공</a>과 시즈네의 도움으로 논문이 완성 단계에 이른 마루키는 떠나기 전 마지막으로 저녁을 대접하며 감사를 전한다.</p>
+  <p>시즈네는 자신의 처지와 마루키의 입장을 생각해 <b>끝내 마음을 전하지 못한다.</b> 그러나 반년 동안 가장 가까운 곳에서 그를 지지했던 만큼, <span class="hl">마루키의 인지세계 한켠에 그녀의 존재가 새겨진다.</span><sup class="fn"><a href="#fn6" id="r6">[6]</a></sup></p>
+  <div class="chat"><div class="bubble s"><i>시즈네</i>그때 먹었던 초밥, 엄청 맛있었어요.</div><div class="bubble m"><i>마루키</i>비싼 만큼 맛있었지~ 다음엔 다른 것도 먹어볼까?</div></div>
+  <div class="clear"></div>
+  </div>
+
+  <h3 id="s3-6"><span class="hn">3.6.</span> 3학기, 그 후<a class="edit" href="#">[편집]</a></h3>
+  <div class="sec-body">
+  <p><b>다음 해 여름.</b> 대학생이 된 시즈네는 <a href="#">3학기</a>의 어렴풋한 잔상을 핑계 삼아 마루키에게 연락하고, 졸업 후 첫 재회를 갖는다.</p>
+  <p>마루키는 자신이 저지른 일을 고백하며, 현실과 인지세계가 뒤섞이면서 기억에 영향이 남았을 것이라 추측한다. 하지만 3학기를 거치며 깨달음을 얻은 두 사람은 이 또한 마주하기로 한다. 그리고 시즈네는 마루키에게 <b>한 걸음 더 다가갈 용기</b>를 낸다.</p>
+  <p>더 이상 선생님이 아니게 된 마루키를 다시 "마루키 씨"라고 부르기 시작하며, 마루키 쪽도 "이런 마음으로 봐도 되는 걸까" 하고 곤란해하는 중이다. <del>곤란해하는 것치고는 별로 안 곤란해 보인다</del></p>
+  <div class="chat"><div class="bubble s"><i>시즈네</i>더 가까이 가면 안될까요?</div><div class="bubble m"><i>마루키</i>안되는 건 아니지만……!</div></div>
+  </div>
+  </div>
+
+  <!-- 4 -->
+  <h2 id="s4"><span class="hn">4.</span> 인간관계<a class="edit" href="#">[편집]</a></h2>
+  <div class="sec-body">
+  <h3 id="s4-1"><span class="hn">4.1.</span> 마루키 타쿠토<a class="edit" href="#">[편집]</a></h3>
+  <div class="sec-body">
+  <p>상세 내용은 <a href="#">마루키 타쿠토</a> 문서 참고.</p>
+  <p>보건실에서 자주 마주치는 보건위원장과 상담교사. 사담을 자주 나누고, 시즈네가 마루키의 연구를 돕기도 한다. 자주 다쳐서 오는 마루키를 치료해 주는 것도 시즈네의 몫이다.<sup class="fn"><a href="#fn7" id="r7">[7]</a></sup></p>
+  <p>마루키는 시즈네의 마음을 눈치챘지만 모르는 척해 주고 있으며, 본인도 모르는 사이 시즈네에게 깊은 신뢰와 안정감을 느끼고 있다.</p>
+  <table class="w">
+    <tr><th></th><th>처음 만났을 때</th><th>지금</th></tr>
+    <tr><td class="k">마루키 → 시즈네</td><td>조용하면서도 남들을 잘 돕고 책임감 있어 보이는 학생</td><td>모든 걸 털어놓으며 쉴 수 있는 따뜻한 안식처</td></tr>
+    <tr><td class="k">시즈네 → 마루키</td><td>인기가 많을 것 같아서, 조용한 보건실은 끝이라 생각했던 사람</td><td>짐을 나눠 들고 곁에서 보듬어 드리고 싶은 다정한 분</td></tr>
+  </table>
+  <details class="fold"><summary>관계 해석 시 주의사항</summary><div class="in">
+    <ul class="w">
+      <li>다정하게 이야기를 나누거나, 시즈네가 부끄러워하고 설레는 구도는 OK.</li>
+      <li>마루키 쪽이 과하게 치근덕거리는 묘사는 NG.</li>
+      <li>마루키는 <b>상담교사</b>이지 보건교사가 아니다. 즉 신체 치료는 하지 않는다. 치료는 시즈네 담당.</li>
+    </ul>
+  </div></details>
+  </div>
+
+  <h3 id="s4-2"><span class="hn">4.2.</span> 아마미야<a class="edit" href="#">[편집]</a></h3>
+  <div class="sec-body">
+  <p>원작 주인공. 마루키의 연구를 함께 도운 학생으로, 6월 14일 시즈네의 <b>이상형을 알아채 버린</b> 장본인이기도 하다. <del>눈치가 너무 좋다</del></p>
+  </div>
+
+  <h3 id="s4-3"><span class="hn">4.3.</span> 부모<a class="edit" href="#">[편집]</a></h3>
+  <div class="sec-body">
+  <p>시즈네에게 무관심하다. 자세한 내용은 <a href="#s2-3">가정환경</a> 항목 참고.</p>
+  </div>
+  </div>
+
+  <!-- 5 -->
+  <h2 id="s5"><span class="hn">5.</span> 호칭<a class="edit" href="#">[편집]</a></h2>
+  <div class="sec-body">
+  <div class="scroll"><table class="w">
+    <tr><th>시기</th><th>시즈네 → 마루키</th><th>마루키 → 시즈네</th></tr>
+    <tr><td class="k">첫 만남</td><td>마루키 씨</td><td>타키카와 상</td></tr>
+    <tr><td class="k">마음을 연 뒤</td><td>마루키 선생님</td><td>시즈네<sup class="fn"><a href="#fn8" id="r8">[8]</a></sup></td></tr>
+    <tr><td class="k">졸업 후</td><td>마루키 씨<br><small>(더 이상 선생님이 아니니까)</small></td><td>시즈네</td></tr>
+  </table></div>
+  </div>
+
+  <!-- 6 -->
+  <h2 id="s6"><span class="hn">6.</span> 명대사<a class="edit" href="#">[편집]</a></h2>
+  <div class="sec-body">
+  <blockquote>엄청 다정하고, 멋진 목표예요.<span class="who">— 마루키의 연구 목표를 들었을 때</span></blockquote>
+  <blockquote>저를 이름으로 불러준 사람이 없었어서, 기뻤어요.<span class="who">— 처음 이름으로 불린 뒤</span></blockquote>
+  <blockquote>더 가까이 가면 안될까요?<span class="who">— 졸업 후 재회에서</span></blockquote>
+  <p>마루키 쪽 대사로는 다음이 유명하다.</p>
+  <blockquote>시즈네가 잘못한 것도 없고, 그런 걸로 널 이상하게 생각하지도 않아.<span class="who">— 마루키 타쿠토</span></blockquote>
+  </div>
+
+  <!-- 7 -->
+  <h2 id="s7"><span class="hn">7.</span> 갤러리<a class="edit" href="#">[편집]</a></h2>
+  <div class="sec-body">
+  <p>커미션 작품에는 작가 표기를 함께 달았다. 전체 갤러리는 팬사이트에서 볼 수 있다.</p>
+  <h4>본편</h4>
+  <div class="gallery">
+    <figure><img loading="lazy" src="img/g-0004-t.webp" data-full="img/g-0004.webp" alt=""><figcaption>보건실 한 칸</figcaption></figure>
+    <figure><img loading="lazy" src="img/g-0017-t.webp" data-full="img/g-0017.webp" alt=""><figcaption>보건실 일상 © 315</figcaption></figure>
+    <figure><img loading="lazy" src="img/g-0012-t.webp" data-full="img/g-0012.webp" alt=""><figcaption>치료해 주기 © 쭈돌</figcaption></figure>
+    <figure><img loading="lazy" src="img/g-0008-t.webp" data-full="img/g-0008.webp" alt=""><figcaption>도시락 © 누가</figcaption></figure>
+    <figure><img loading="lazy" src="img/g-0006-t.webp" data-full="img/g-0006.webp" alt=""><figcaption>3학기 쨔무쨔무 © 누가</figcaption></figure>
+    <figure><img loading="lazy" src="img/g-0028-t.webp" data-full="img/g-0028.webp" alt=""><figcaption>무릎베개 나데나데 © 쿠지</figcaption></figure>
+  </div>
+  <h4>엔딩 후</h4>
+  <div class="gallery">
+    <figure><img loading="lazy" src="img/g-0033-t.webp" data-full="img/g-0033.webp" alt=""><figcaption>가까이 © 담</figcaption></figure>
+    <figure><img loading="lazy" src="img/g-0042-t.webp" data-full="img/g-0042.webp" alt=""><figcaption>오다이바 다리 위 © 27</figcaption></figure>
+    <figure><img loading="lazy" src="img/g-0045-t.webp" data-full="img/g-0045.webp" alt=""><figcaption>플라네타리움 © 쿠지</figcaption></figure>
+    <figure><img loading="lazy" src="img/g-0046-t.webp" data-full="img/g-0046.webp" alt=""><figcaption>가을 데이트</figcaption></figure>
+  </div>
+  </div>
+
+  <!-- 8 -->
+  <h2 id="s8"><span class="hn">8.</span> 여담<a class="edit" href="#">[편집]</a></h2>
+  <div class="sec-body">
+  <ul class="w">
+    <li>이름의 静音(시즈네)는 "고요한 소리"라는 뜻으로, 조용한 보건실을 좋아하는 성격과도 맞아떨어진다.</li>
+    <li>마루키(182cm)와의 키 차이는 <b>15cm</b>.</li>
+    <li>마루키의 이미지 컬러가 하늘색/흰색이라, 두 사람을 나란히 놓으면 <span class="sw" style="background:#bedae5"></span>하늘색과 <span class="sw" style="background:#2b182c"></span>검보라색이 대비를 이룬다. 공식 타임라인의 말풍선 색도 이를 따른다.</li>
+    <li>오너가 드림을 시작한 날은 <b>2025년 1월 20일</b>이다.</li>
+    <li>팬사이트 이름은 <a class="ext" href="https://sohappyworld.pages.dev">So Happy World</a>. 입장 화면이 원작의 예고장을 패러디한 형식이며, 서명은 "사립슈진고교 보건실"이다.</li>
+    <li>AU 설정이 상당히 많다. 빅밴드 AU, 집사와 메이드 AU, 사냥꾼과 빨간모자 AU 등이 있으며 <del>마루키가 강아지가 되기도 한다</del>.<sup class="fn"><a href="#fn9" id="r9">[9]</a></sup></li>
+  </ul>
+  </div>
+
+  <div class="footnotes">
+    <ol>
+      <li id="fn1"><a class="back" href="#r1">[1]</a> 팬아트 제목에 자주 쓰이는 애칭. "쨔무쨔무" 시리즈가 대표적이다.</li>
+      <li id="fn2"><a class="back" href="#r2">[2]</a> 원작에 없는 오너 설정 아르카나. 남에게 끝없이 퍼 주기만 하는 성격을 반영한 이름으로 해석된다.</li>
+      <li id="fn3"><a class="back" href="#r3">[3]</a> 눈치챘지만 모르는 척해 주는 중이다.</li>
+      <li id="fn4"><a class="back" href="#r4">[4]</a> SD 일러스트에서는 거의 더듬이처럼 표현된다.</li>
+      <li id="fn5"><a class="back" href="#r5">[5]</a> 오너 설정표 원문 표현 그대로다.</li>
+      <li id="fn6"><a class="back" href="#r6">[6]</a> 이것이 3학기에 "어렴풋한 잔상"이 남는 복선이 된다.</li>
+      <li id="fn7"><a class="back" href="#r7">[7]</a> 원작에서도 마루키는 덜렁대는 성격이라 생각보다 자주 다친다.</li>
+      <li id="fn8"><a class="back" href="#r8">[8]</a> 연구를 돕기 시작한 뒤, 시즈네의 부탁으로 이름을 부르게 되었다.</li>
+      <li id="fn9"><a class="back" href="#r9">[9]</a> 댕토(댕댕이 × 토끼) AU 참고.</li>
+    </ol>
+  </div>
+
+  <div class="doc-foot">이 문서의 내용은 MZN 팬사이트 및 오너 설정 자료를 바탕으로 작성된 팬메이드 페이지입니다. 일러스트의 저작권은 각 작가에게 있으며, 원작 캐릭터는 © ATLUS.</div>
+</article>
+
+<aside>
+  <div class="card"><h4>실시간 검색어</h4>
+    <ol class="rank">
+      <li><a href="#">마루키 타쿠토</a></li>
+      <li><a href="#">타키카와 시즈네</a></li>
+      <li><a href="#">인지가학</a></li>
+      <li><a class="red" href="#">보건실 창가 자리</a></li>
+      <li><a href="#">페르소나 5 더 로열</a></li>
+      <li><a class="red" href="#">돈지루</a></li>
+    </ol>
+  </div>
+  <div class="card"><h4>최근 변경</h4>
+    <ol class="rank" style="list-style:none;padding:0">
+      <li><span>21:47</span><a href="#">타키카와 시즈네</a></li>
+      <li><span>21:12</span><a href="#">마루키 타쿠토</a></li>
+      <li><span>19:30</span><a href="#">MZN</a></li>
+      <li><span>18:05</span><a href="#">사립 슈진 학원/보건실</a></li>
+    </ol>
+  </div>
+</aside>
+</div>
+
+<footer>보건위키는 위키 문서 형식을 빌린 팬메이드 패러디 페이지로, 실제 위키 서비스와 관련이 없어요.</footer>
+
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+// 테마 전환
+(function(){
+  var root=document.documentElement, KEY='nw-theme';
+  try{var t=localStorage.getItem(KEY); if(t) root.setAttribute('data-theme',t);}catch(e){}
+  document.getElementById('themeBtn').onclick=function(){
+    var cur=root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+    var next=cur==='dark'?'light':'dark'; root.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+  };
+})();
+// 인포박스 이미지 탭
+document.querySelectorAll('.itabs button').forEach(function(b){
+  b.onclick=function(){
+    document.querySelectorAll('.itabs button').forEach(function(x){x.classList.toggle('on',x===b)});
+    document.querySelectorAll('.ipanel').forEach(function(p){p.classList.toggle('on',p.id===b.dataset.p)});
+  };
+});
+// 문단 접기 (제목 클릭)
+document.querySelectorAll('article h2, article h3').forEach(function(h){
+  h.addEventListener('click',function(e){
+    if(e.target.closest('a')) return;
+    var body=h.nextElementSibling;
+    if(body && body.classList.contains('sec-body')){ body.classList.toggle('closed'); h.classList.toggle('closed'); }
+  });
+});
+// 각주 미리보기
+var pop=document.createElement('div'); pop.className='fn-pop'; document.body.appendChild(pop);
+document.querySelectorAll('sup.fn a').forEach(function(a){
+  a.addEventListener('mouseenter',function(){
+    var li=document.querySelector(a.getAttribute('href')); if(!li) return;
+    pop.innerHTML=li.innerHTML.replace(/<a class="back"[^>]*>.*?<\/a>/,'');
+    var r=a.getBoundingClientRect();
+    pop.style.display='block';
+    pop.style.left=Math.max(8,Math.min(r.left+scrollX, innerWidth-340))+'px';
+    pop.style.top=(r.bottom+scrollY+6)+'px';
+  });
+  a.addEventListener('mouseleave',function(){pop.style.display='none'});
+});
+// 이미지 크게 보기
+var lb=document.getElementById('lb');
+document.querySelectorAll('.gallery img, .fig img, .ipanel img').forEach(function(img){
+  img.addEventListener('click',function(){lb.querySelector('img').src=img.dataset.full||img.src; lb.classList.add('on');});
+});
+lb.onclick=function(){lb.classList.remove('on')};
+</script>
+</body>
+</html>
